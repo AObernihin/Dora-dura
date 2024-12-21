@@ -73,7 +73,7 @@ public:
         }
         head = tail = nullptr;
     }
-    //=====================================ДЗ ТУТ
+    
     int GetSize()const
     {
         int size = 0;
@@ -88,18 +88,18 @@ public:
     void SetSize(int size, int grow) {
         if (size > GetSize()) {
             for (int i = 0; i < size - GetSize() - grow; i++) {
-                this->AddToTail(NULL);// тіпа змінив розмір
+                this->AddToTail(NULL);
             }
         }
         else if (size < GetSize()) {
             for (int i = 0; i < GetSize() - size + grow; i++) {
-                this->DeleteFromTail();//тоже тіпа змінив розмір
+                this->DeleteFromTail();
             }
         }
 
 
         for (int i = 0; i < grow; i++) {
-            this->AddToTail(0);// тіпа виділив пам'ять
+            this->AddToTail(0);
         }
     }
     int GetUpperBound() {
@@ -232,7 +232,7 @@ public:
     }
    
 
-    //====================================== ДЗ ТУТ
+   
     ~List()
     {
         Clear();
@@ -242,5 +242,4 @@ public:
 int main()
 {
 
-    cout << "2347";
 }
